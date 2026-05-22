@@ -1,38 +1,119 @@
 class Translation(object):
-    START_TEXT = """Hi {} 🤗,
-I'm <b>Url Uploader Bot! ✨</b>
+    START_TEXT = """
+👋 Hᴇʟʟᴏ {} ✨
 
-Send me a direct link and I will upload it to telegram as a file/video.</b>
-/help for more details!
+╔══════════════════════╗
+🚀 Vɪᴘ Uʀʟ Uᴘʟᴏᴀᴅᴇʀ Bᴏᴛ 🚀
+╚══════════════════════╝
+
+⚡ Aᴅᴠᴀɴᴄᴇᴅ Tᴇʟᴇɢʀᴀᴍ Dɪʀᴇᴄᴛ Lɪɴᴋ Uᴘʟᴏᴀᴅᴇʀ
+🎬 Sᴛʀᴇᴀᴍ • Dᴏᴡɴʟᴏᴀᴅ • Uᴘʟᴏᴀᴅ Iɴsᴛᴀɴᴛʟʏ
+📥 Sᴜᴘᴘᴏʀᴛs Dɪʀᴇᴄᴛ Lɪɴᴋs & M3U8 Sᴛʀᴇᴀᴍs
+🔒 AES-128 HLS Sᴜᴘᴘᴏʀᴛᴇᴅ
+📤 Uʟᴛʀᴀ Fᴀsᴛ Tᴇʟᴇɢʀᴀᴍ Uᴘʟᴏᴀᴅs
+
+━━━━━━━━━━━━━━━━━━━
+
+📌 Wʜᴀᴛ Cᴀɴ I Dᴏ?
+
+• Uᴘʟᴏᴀᴅ Dɪʀᴇᴄᴛ Lɪɴᴋs Tᴏ Tᴇʟᴇɢʀᴀᴍ
+• Uᴘʟᴏᴀᴅ As Vɪᴅᴇᴏ / Fɪʟᴇ / Aᴜᴅɪᴏ
+• Sᴛʀᴇᴀᴍ Sᴜᴘᴘᴏʀᴛᴇᴅ Vɪᴅᴇᴏ Uᴘʟᴏᴀᴅs
+• Fᴀsᴛ Tᴇʟᴇɢʀᴀᴍ Uᴘʟᴏᴀᴅ Eɴɢɪɴᴇ
+• Aᴜᴛᴏ Mᴇᴅɪᴀ Pʀᴏᴄᴇssɪɴɢ
+
+━━━━━━━━━━━━━━━━━━━
+
+🛠 Sᴜᴘᴘᴏʀᴛᴇᴅ Fᴏʀᴍᴀᴛs
+
+➤ MP4 • MKV • MP3
+➤ M3U8 / HLS Sᴛʀᴇᴀᴍs
+➤ Dɪʀᴇᴄᴛ Dᴏᴡɴʟᴏᴀᴅ URLs
+➤ Dᴏᴄᴜᴍᴇɴᴛs & Mᴇᴅɪᴀ Fɪʟᴇs
+
+━━━━━━━━━━━━━━━━━━━
+
+📥 Sᴇɴᴅ Mᴇ A Dɪʀᴇᴄᴛ Lɪɴᴋ Aɴᴅ I Wɪʟʟ Uᴘʟᴏᴀᴅ Iᴛ Tᴏ Tᴇʟᴇɢʀᴀᴍ As A Fɪʟᴇ / Vɪᴅᴇᴏ ⚡
+
+📖 Usᴇ /help Fᴏʀ Mᴏʀᴇ Dᴇᴛᴀɪʟs!
+"""
 
 <b>Join @url_anuj_bot"""
-    ADD_CAPTION_HELP = """Select an uploaded file/video or forward me <b>Any Telegram File</b> and just write the text you want to be on the file <b>as a reply to the file</b> and the text you wrote will be attached as the caption! 🤩
+ADD_CAPTION_HELP = """
+📝 <b>Aᴅᴅ Cᴜsᴛᴏᴍ Cᴀᴘᴛɪᴏɴ Tᴏ Yᴏᴜʀ Fɪʟᴇs</b> ✨
+
+📤 Sᴇʟᴇᴄᴛ Oʀ Fᴏʀᴡᴀʀᴅ Aɴʏ <b>Tᴇʟᴇɢʀᴀᴍ Fɪʟᴇ / Vɪᴅᴇᴏ</b>
+
+💬 Tʜᴇɴ Rᴇᴘʟʏ Tᴏ Tʜᴀᴛ Fɪʟᴇ Wɪᴛʜ Tʜᴇ Tᴇxᴛ Yᴏᴜ Wᴀɴᴛ Tᴏ Sᴇᴛ As Cᴀᴘᴛɪᴏɴ.
+
+⚡ Tʜᴇ Bᴏᴛ Wɪʟʟ Aᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ Aᴅᴅ Yᴏᴜʀ Tᴇxᴛ As Tʜᴇ Nᴇᴡ Cᴀᴘᴛɪᴏɴ 🤩
+"""
     
 Ex: <a href='https://telegra.ph/file/198bcda5944f787373122.jpg'>See This!</a> 👇"""
-    INCORRECT_REQUEST = """<b>❗Make sure you submit your request correctly❗</b>
+    INCORRECT_REQUEST = """
+❗ <b>Iɴᴄᴏʀʀᴇᴄᴛ Rᴇǫᴜᴇsᴛ Fᴏʀᴍᴀᴛ</b>
+
+📌 Pʟᴇᴀsᴇ Mᴀᴋᴇ Sᴜʀᴇ Yᴏᴜ Sᴜʙᴍɪᴛ Yᴏᴜʀ Rᴇǫᴜᴇsᴛ Cᴏʀʀᴇᴄᴛʟʏ.
+
+💡 Cʜᴇᴄᴋ Tʜᴇ Ussᴀɢᴇ Gᴜɪᴅᴇ Oʀ Usᴇ /help Fᴏʀ Pʀᴏᴘᴇʀ Iɴsᴛʀᴜᴄᴛɪᴏɴs.
+"""
     
 /help for more details!"""
-    DISPLAY_PROGRESS = """[{0}{1}] {2}%
-<i>🗃️ {3}</i>
+    DISPLAY_PROGRESS = """
+📥 <b>Dᴏᴡɴʟᴏᴀᴅɪɴɢ Vɪᴅᴇᴏ</b>
 
-<b>▫️Finished :</b> <i>{4} of {5}</i>
-<b>▫️Speed :</b> <i>{6}/s</i>
-<b>▫️Time left :</b> <i>{7}</i>"""
-    FORMAT_SELECTION = """<b>If you haven't set <a href='{}'>a thumbnail</a> before you can send a photo now. If you don't want to don't worry - You will get an auto genarated thumbnail from the video to your upload </b>
+╭━━━━❰ Pʀᴏɢʀᴇss ❱━━━━╮
+┣⪼ [{0}{1}] {2}%
+┣⪼ 🚀 Sᴘᴇᴇᴅ: <i>{6}/s</i>
+┣⪼ ⏱️ ETA: <i>{7}</i>
+┣⪼ 📦 Dᴏᴡɴʟᴏᴀᴅᴇᴅ: <i>{4} / {5}</i>
+┣⪼ 🗂️ Fɪʟᴇ: <i>{3}</i>
+╰━━━━━━━━━━━━━━━━╯
+"""
+    FORMAT_SELECTION = """
+🖼️ <b>Tʜᴜᴍʙɴᴀɪʟ Sᴇᴛᴜᴘ</b>
+
+📌 Iғ Yᴏᴜ Hᴀᴠᴇɴ'ᴛ Sᴇᴛ <a href='{}'>A Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ</a> Yᴇᴛ,
+Yᴏᴜ Cᴀɴ Sᴇɴᴅ A Pʜᴏᴛᴏ Nᴏᴡ 🖼️
+
+⚡ Dᴏɴ'ᴛ Wᴀɴᴛ Tᴏ Sᴇᴛ Oɴᴇ?
+Nᴏ Pʀᴏʙʟᴇᴍ 😌
+
+🤖 Tʜᴇ Bᴏᴛ Wɪʟʟ Aᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ Gᴇɴᴇʀᴀᴛᴇ A Tʜᴜᴍʙɴᴀɪʟ Fʀᴏᴍ Tʜᴇ Vɪᴅᴇᴏ Fᴏʀ Yᴏᴜ.
+"""
+
+𝗦𝗲𝗹𝗲𝗰𝘁 𝗔𝗻𝗱 𝗖𝗵𝗼𝘀𝗲 𝗬𝗼𝘂𝗿 𝗙𝗼𝗿𝗺𝗮𝘁 🎬
+
+⚠️ <b>Fɪʟᴇs Lᴀʀɢᴇʀ Tʜᴀɴ 2GB Aʀᴇ Nᴏᴛ Sᴜᴘᴘᴏʀᴛᴇᴅ.</b>
+"""
+
+SET_CUSTOM_USERNAME_PASSWORD = """
+🔐 <b>Pʀᴇᴍɪᴜᴍ Vɪᴅᴇᴏ Dᴏᴡɴʟᴏᴀᴅ</b>
+
+Iғ Tʜᴇ Vɪᴅᴇᴏ Rᴇǫᴜɪʀᴇs Lᴏɢɪɴ Cʀᴇᴅᴇɴᴛɪᴀʟs,
+Sᴇɴᴅ Tʜᴇ Dᴇᴛᴀɪʟs Iɴ Tʜᴇ Fᴏʟʟᴏᴡɪɴɢ Fᴏʀᴍᴀᴛ 👇
+
+<code>URL | filename | username | password</code>
+"""
+
+DOWNLOAD_START = """
+📥 <b>Fɪʟᴇ Dᴇᴛᴇᴄᴛᴇᴅ</b>
+
+🗂️ <i>{}</i>
+
+⚡ Sᴛᴀʀᴛɪɴɢ Dᴏᴡɴʟᴏᴀᴅ...
+"""
     
-𝗦𝗲𝗹𝗲𝗰𝘁 𝗔𝗻𝗱 𝗖𝗵𝗼𝘀𝗲 𝗬𝗼𝘂𝗿 𝗙𝗼𝗿𝗺𝗮𝘁
+<b>Dᴏᴡɴʟᴏᴀᴅɪɴɢ Tᴏ Mʏ Sᴇʀᴠᴇʀ... 📥</b>
 
-<b>larger than 2 GB not support.</b>"""
-    SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
-URL | filename | username | password"""
-    DOWNLOAD_START = """<b>File detected:</b> {}
-    
-<b>Downloading to my server... </b>
+Pʟᴇᴀsᴇ Wᴀɪᴛ, Uᴘʟᴏᴀᴅɪɴɢ Wɪʟʟ Sᴛᴀʀᴛ As Sᴏᴏɴ As Pᴏssɪʙʟᴇ 😎"""
 
-Please wait uploading will start as soon as possible 😎"""
-    UPLOAD_START = "<b>Uploading to Telegram... </b>"
-    RCHD_TG_API_LIMIT = """<b>❗The file couldn't be uploaded❗</b>
-Sorry. I cannot upload files greater than 2GB due to Telegram API limitations.
+UPLOAD_START = "<b>📤 Uᴘʟᴏᴀᴅɪɴɢ Tᴏ Tᴇʟᴇɢʀᴀᴍ... ⚡</b>"
+
+RCHD_TG_API_LIMIT = """<b>❗Fɪʟᴇ Cᴏᴜʟᴅɴ'ᴛ Bᴇ Uᴘʟᴏᴀᴅᴇᴅ❗</b>
+
+😔 Sᴏʀʀʏ, I Cᴀɴɴᴏᴛ Uᴘʟᴏᴀᴅ Fɪʟᴇs Lᴀʀɢᴇʀ Tʜᴀɴ 2GB Dᴜᴇ Tᴏ Tᴇʟᴇɢʀᴀᴍ API Lɪᴍɪᴛᴀᴛɪᴏɴs.
+"""
 
 <b>▫️File detected:</b> <i>{}</i>
 <b>▫️Downloaded:</b> <i>in {} seconds</i>
@@ -53,23 +134,31 @@ I think you have entered an unaccessible URL or a private URL (which only works 
 
 <b>🚨Additional info:</b>
 {}"""
-    HELP_USER = """<b>How to use me?</b> 🤔
-Follow these steps! 👇
+    HELP_USER = """<b>📖 Hᴏᴡ Tᴏ Usᴇ Mᴇ?</b> 🤔
+
+Fᴏʟʟᴏᴡ Tʜᴇsᴇ Sɪᴍᴘʟᴇ Sᴛᴇᴘs 👇
+"""
     
-<b>1. Send URL</b>
+<b>1. Sᴇɴᴅ URL</b>
 
-If you want a custom caption on your video/file send the name/text you want to set on the video/file in the following format 👇
+✨ <b>Cᴜsᴛᴏᴍ Cᴀᴘᴛɪᴏɴ Fᴏʀ Vɪᴅᴇᴏ / Fɪʟᴇ</b>
 
-<b>Link * caption</b> (without extension). 
-<i>[Separate the link and the caption name with "*" mark].</i>
+Iғ Yᴏᴜ Wᴀɴᴛ Tᴏ Sᴇᴛ A Cᴜsᴛᴏᴍ Cᴀᴘᴛɪᴏɴ Oɴ Yᴏᴜʀ Vɪᴅᴇᴏ Oʀ Fɪʟᴇ,
+Sᴇɴᴅ Tʜᴇ Lɪɴᴋ Iɴ Tʜᴇ Fᴏʟʟᴏᴡɪɴɢ Fᴏʀᴍᴀᴛ 👇
 
-<u>It is important that you separate with spaces the URL, * and the caption.</u>
+<b>Link * Caption</b>
 
-<b>👍 Send something like this:</b>
-<code>https://www.website.com/video.mp4 * caption text</code>
+<i>[Sᴇᴘᴀʀᴀᴛᴇ Tʜᴇ Lɪɴᴋ Aɴᴅ Cᴀᴘᴛɪᴏɴ Wɪᴛʜ "*" Mᴀʀᴋ]</i>
 
-<b>🤡 Not like this:</b>
-<code>❌ https://www.website.com/video.mp4*caption text ❌</code>
+<u>⚠️ Iᴛ Is Iᴍᴘᴏʀᴛᴀɴᴛ Tᴏ Gɪᴠᴇ Sᴘᴀᴄᴇs Bᴇғᴏʀᴇ Aɴᴅ Aғᴛᴇʀ "*"</u>
+
+<b>✅ Cᴏʀʀᴇᴄᴛ Exᴀᴍᴘʟᴇ:</b>
+
+<code>https://www.website.com/video.mp4 * My Custom Caption</code>
+
+<b>❌ Wʀᴏɴɢ Exᴀᴍᴘʟᴇ:</b>
+
+<code>https://www.website.com/video.mp4*My Caption</code>
 
 The caption/text you type will be automatically set as the custom name of the uploaded file 😎
 
