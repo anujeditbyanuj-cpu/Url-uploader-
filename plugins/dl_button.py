@@ -181,44 +181,60 @@ async def ddl_call_back(bot, message):
 async def download_coroutine(info_msg, session, url, file_name, start):
     downloaded = 0
     display_message = ""
+
     async with session.get(url, timeout=Config.PROCESS_MAX_TIMEOUT) as response:
         total_length = int(response.headers["Content-Length"])
         content_type = response.headers["Content-Type"]
+
         if "text" in content_type and total_length < 500:
             return await response.release()
+
         with open(file_name, "wb") as f_handle:
             while True:
                 chunk = await response.content.read(Config.CHUNK_SIZE)
+
                 if not chunk:
                     break
+
                 f_handle.write(chunk)
-                downloaded += Config.CHUNK_SIZE
+                downloaded += len(chunk)
+
                 now = time.time()
                 diff = now - start
+
                 if round(diff % 5.00) == 0 or downloaded == total_length:
+
                     percentage = downloaded * 100 / total_length
                     speed = downloaded / diff
-                    elapsed_time = round(diff) * 1000
                     time_to_completion = round((total_length - downloaded) / speed) * 1000
-                    estimated_total_time = elapsed_time + time_to_completion
+
                     try:
-                        current_message = "<b>Downloading... </b>\n" + Translation.DISPLAY_PROGRESS.format(
-                            "".join(["☻" for i in range(math.floor(percentage / 5))]),
-                            "".join(["○" for i in range(20 - math.floor(percentage / 5))]),
-                            round(percentage, 2),
-                            file_name.split("/")[-1],
-                            humanbytes(downloaded),
-                            humanbytes(total_length),
-                            humanbytes(speed),
-                            TimeFormatter(time_to_completion) if time_to_completion != "" else "0s"
+                        progress_bar = (
+                            "[" +
+                            "".join(["⬡" for i in range(math.floor(percentage / 10))]) +
+                            "".join(["⬢" for i in range(10 - math.floor(percentage / 10))]) +
+                            "]"
                         )
+
+                        current_message = f"""
+📥 <b>Downloading Video</b>
+
+╭━━━━❰ Progress ❱━━━━╮
+┣⪼ 🎬 <b>File:</b> {file_name.split('/')[-1]}
+┣⪼ 🎞 <b>Quality:</b> MP4
+┣⪼ 📦 <b>Size:</b> {humanbytes(total_length)}
+┣⪼ {progress_bar} <b>{round(percentage, 2)}%</b>
+┣⪼ 🚀 <b>Speed:</b> {humanbytes(speed)}/s
+┣⪼ ⏱️ <b>ETA:</b> {TimeFormatter(time_to_completion) if time_to_completion != '' else '0s'}
+╰━━━━━━━━━━━━━━━━╯
+"""
+
                         if current_message != display_message:
-                            await info_msg.edit_text(
-                                current_message
-                            )
+                            await info_msg.edit_text(current_message)
                             display_message = current_message
                             time.sleep(2.00)
+
                     except Exception as e:
-                        #logger.info(str(e))
                         pass
+
         return await response.release()
