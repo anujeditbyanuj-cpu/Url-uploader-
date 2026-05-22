@@ -14,9 +14,9 @@
     "remote",
     "uploader"
   ],
-  "success_url": "https://t.me/Urluploaderadvancedbot",
-  "website": "https://github.com/aceknox",
-  "repository": "https://github.com/aceknox/Url-Uploader-Bot-V4",
+  "success_url": "http://t.me/url_ak_uploader_bot",
+  "website": "https://github.com/anujeditbyanuj-cpu",
+  "repository": "https://github.com/anujeditbyanuj-cpu/Url-uploader-",
 
   "env": {
     "WEBHOOK": {
