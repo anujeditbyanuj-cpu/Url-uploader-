@@ -1,6 +1,8 @@
 # © aceknox
 
 import logging
+import random
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 import os
@@ -96,20 +98,33 @@ async def add_caption_help(bot, update):
 
 @Clinton.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
+
     await AddUser(bot, update)
-    await bot.send_message(
+
+    photo = random.choice(PICS)
+
+    await bot.send_photo(
         chat_id=update.chat.id,
-        text=Translation.START_TEXT.format(update.from_user.first_name),
+        photo=photo,
+        caption=Translation.START_TEXT.format(update.from_user.first_name),
+        parse_mode="html",
         reply_markup=InlineKeyboardMarkup(
             [
-                
-                   [ 
-                    InlineKeyboardButton("Channel ⚡", url="https://t.me/url_anuj_bot"),
-                    InlineKeyboardButton("Developer 👨‍⚖️", url="https://t.me/anujedits76"),
-                   
+
+                [
+                    InlineKeyboardButton(
+                        "Channel ⚡",
+                        url="https://t.me/url_anuj_bot"
+                    ),
+
+                    InlineKeyboardButton(
+                        "Developer 👨‍⚖️",
+                        url="https://t.me/anujedits76"
+                    ),
+
                 ],
-            
-         ]
+
+            ]
         ),
         reply_to_message_id=update.message_id
     )
